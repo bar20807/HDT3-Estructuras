@@ -1,5 +1,4 @@
 import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -8,9 +7,10 @@ public class Main {
         MergeSort merge = new MergeSort();
         QuickSort quick = new QuickSort();
         RadixSort radix = new RadixSort();
+        GnomeSort gnome = new GnomeSort();
         Random rd = new Random();
 
-        int arr[] = new int[3000];
+        Comparable arr[] = new Comparable[3000];
 
         for(int i = 0; i < 3000; i++){
             arr[i] = rd.nextInt(3000);
@@ -18,7 +18,8 @@ public class Main {
 
         //merge.sort(arr, 0, arr.length - 1);
         //quick.sort(arr, 0, arr.length - 1);
-        radix.sort(arr, arr.length -1);
+        //radix.sort(arr, arr.length -1);
+        gnome.gnomeSort(arr, arr.length -1);
 
         int n = arr.length;
         for (int i=0; i<n; ++i)
