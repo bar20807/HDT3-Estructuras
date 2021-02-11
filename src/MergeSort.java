@@ -2,15 +2,15 @@ public class MergeSort {
 
 
 
-    public void merge(Comparable<Integer> arr[], int l, int m, int r)
+    public void merge(Comparable arr[], int l, int m, int r)
     {
         // Encuentra el tamano de los sub arreglos que se dividen del arreglo principal.
         int n1 = m - l + 1;
         int n2 = r - m;
 
         /* Se instancian los sub arreglos que se utilizaran en el proceso */
-        Comparable<Integer> L[] = new Comparable[n1];
-        Comparable<Integer> R[] = new Comparable[n2];
+        Comparable L[] = new Comparable[n1];
+        Comparable R[] = new Comparable[n2];
 
         /*Se toman los datos de el arreglo mayor y, segun su indice, se agregan a los sub arreglos*/
         for (int i = 0; i < n1; ++i)
@@ -26,7 +26,7 @@ public class MergeSort {
 
         /*Se recorren los datos y se ordenan*/
         while (i < n1 && j < n2) {
-            if (L[i].compareTo((Integer) R[j]) <= 1 ) {
+            if (L[i].compareTo( R[j]) <= 0 ) {
                 arr[k] = L[i];
                 i++;
             }
@@ -52,7 +52,7 @@ public class MergeSort {
         }
     }
 
-    public void sort(Comparable<Integer> arr[], int l, int r)
+    public void sort(Comparable arr[], int l, int r)
     {
         if (l < r) {
             // Se encuentra el punto intermedio

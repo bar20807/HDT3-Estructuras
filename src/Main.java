@@ -8,6 +8,7 @@ public class Main {
         QuickSort quick = new QuickSort();
         RadixSort radix = new RadixSort();
         GnomeSort gnome = new GnomeSort();
+        BubbleSort bubble = new BubbleSort();
         Random rd = new Random();
 
         Comparable arr[] = new Comparable[3000];
@@ -19,7 +20,8 @@ public class Main {
         //merge.sort(arr, 0, arr.length - 1);
         //quick.sort(arr, 0, arr.length - 1);
         //radix.sort(arr, arr.length -1);
-        gnome.gnomeSort(arr, arr.length -1);
+        //gnome.sort(arr, arr.length -1);
+        //bubble.sort(arr, arr.length -1);
 
         int n = arr.length;
         for (int i=0; i<n; ++i)

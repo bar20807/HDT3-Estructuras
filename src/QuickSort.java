@@ -1,25 +1,25 @@
 public class QuickSort {
 
-    int Quick(Comparable<Integer> arr[], int low, int high)
+    int Quick(Comparable arr[], int low, int high)
     {
-        int pivot = (int) arr[high];
+        Comparable pivot = arr[high];
         int i = (low-1); // Indice del objeto mas pequeno
         for (int j=low; j<high; j++)
         {
             // Si el elemento es mas pequeno que el pivote
-            if ((Integer)arr[j] < pivot)
+            if (arr[j].compareTo(pivot) < 0)
             {
                 i++;
 
                 // intercambiar arrays
-                int temp = (int) arr[i];
+                Comparable temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
         }
 
         // intercambiar arr[i+1] y arr[high] (o el pivote)
-        int temp = (int) arr[i+1];
+        Comparable temp = arr[i+1];
         arr[i+1] = arr[high];
         arr[high] = temp;
 
@@ -30,6 +30,7 @@ public class QuickSort {
     /* La funcion principal que corre el sort*/
     void sort(Comparable arr[], int low, int high)
     {
+
         if (low < high)
         {
             int pi = Quick(arr, low, high);
